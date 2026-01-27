@@ -4,6 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <!-- ✅ SEO Title -->
+    <title>Psychologist Center | Mental Health & Therapy Services</title>
+
+    <!-- ✅ SEO Meta Description -->
+    <meta
+      name="description"
+      content="Professional psychologist center offering therapy, counseling, mental health support, and emotional wellness services for individuals, couples, and families."
+    />
+
+    <!-- ✅ SEO Keywords (not super powerful but still OK for school projects) -->
+    <meta
+      name="keywords"
+      content="psychologist, mental health, therapy, counseling, depression, anxiety, couples therapy"
+    />
+
+    <!-- ✅ Author -->
+    <meta name="author" content="Psychologist Center" />
+
+    <!-- ✅ Open Graph (for Facebook, Messenger, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Psychologist Center | Mental Health & Therapy"
+    />
+    <meta
+      property="og:description"
+      content="Helping you start a new life with professional therapy and mental health support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/seo-preview.png" />
+
     <!-- css style -->
     <link rel="stylesheet" href="style.css" />
     <!-- font awesome style -->
@@ -15,7 +45,8 @@
       referrerpolicy="no-referrer"
     />
     <!-- tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <!-- google font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -97,10 +128,10 @@
     <main>
       <!-- hero section -->
       <section
-        class="bg-[#163d40] mt-5 rounded-3xl max-w-[1495px] mx-auto flex flex-col-reverse lg:flex-row lg:h-[600px]"
+        class="bg-[#163d40] mt-20 rounded-3xl max-w-[1495px] mx-auto flex flex-col-reverse lg:flex-row lg:h-[600px]"
       >
         <!-- TEXT SECTION -->
-        <div class="hero-section-1 w-full lg:w-1/2 p-6 lg:p-25">
+        <div class="hero-section-1   w-full lg:w-1/2 p-6 lg:p-25">
           <h1
             class="text-3xl lg:text-6xl lg:leading-tight font-medium text-white mt-2"
           >
@@ -157,7 +188,7 @@
       </section>
       <!-- section -2 -->
       <section
-        class=" w-full max-w-[1500px] mx-auto text-[#163d40] mt-10 lg:mt-20 px-4"
+        class="w-full max-w-[1500px] mx-auto text-[#163d40] mt-20 lg:mt-20 px-4"
       >
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card 1 -->
@@ -217,7 +248,7 @@
 
       <!-- section-3 -->
       <section
-        class="mt-10 w-full max-w-[1500px] grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto lg:mt-20 px-4"
+        class="mt-30 w-full max-w-[1500px] grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto lg:mt-20 px-4"
       >
         <!-- Image -->
         <img
@@ -383,7 +414,7 @@
       </section>
       <!-- section-4 -->
       <section>
-        <div class="mt-25 font lg:w-[1500px] mx-auto ">
+        <div class="mt-30 font lg:w-[1500px] mx-auto">
           <h2
             class="text-3xl md:text-4xl lg:text-4xl font-medium text-[#153b3d]"
           >
@@ -452,146 +483,184 @@
         </div>
       </section>
       <!-- section 6 -->
- <section class="lg:w-[1500px] mx-auto mt-20 px-4">
-  <!-- Header: Title + Button -->
-  <div class="flex flex-col lg:flex-row items-center lg:justify-between">
-    <!-- Text -->
-    <div class="text-center lg:text-left mb-6 lg:mb-0">
-      <h1 class="text-3xl md:text-4xl lg:text-4xl font-medium text-[#153b3d]">
-        Latest Blog Posts
-      </h1>
-      <p class="mt-3 manrope text-gray-600 text-base md:text-lg">
-        Stay informed about the latest research in psychology.
-      </p>
-    </div>
+      <section class="lg:w-[1500px] mx-auto mt-20 px-4">
+        <!-- Header: Title + Button -->
+        <div class="flex flex-col lg:flex-row items-center lg:justify-between">
+          <!-- Text -->
+          <div class="text-center lg:text-left mb-6 lg:mb-0">
+            <h1
+              class="text-3xl md:text-4xl lg:text-4xl font-medium text-[#153b3d]"
+            >
+              Latest Blog Posts
+            </h1>
+            <p class="mt-3 manrope text-gray-600 text-base md:text-lg">
+              Stay informed about the latest research in psychology.
+            </p>
+          </div>
 
-    <!-- Button -->
-    <div>
-      <button
-        class="bg-[#163c3e] px-5 py-2 rounded-lg border border-[#163c3e] text-white hover:bg-white hover:text-[#163c3e] transition"
-      >
-        View All Posts
-      </button>
-    </div>
-  </div>
+          <!-- Button -->
+          <div>
+            <button
+              class="bg-[#163c3e] px-5 py-2 rounded-lg border border-[#163c3e] text-white hover:bg-white hover:text-[#163c3e] transition"
+            >
+              View All Posts
+            </button>
+          </div>
+        </div>
 
-  <!-- Blog Grid -->
-  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-    <!-- Blog Post 1 -->
-    <div class="mt-10">
-      <img class="rounded-2xl w-full" src="./img/image copy 13.png" alt="">
-      <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
-      <p class="text-2xl mt-2 text-[#163c3f] font-semibold">Navigating the Mind</p>
-      <p class="text-[#525b52] mt-2 text-sm">
-        Covering insights into understanding mental processes and practical ways to manage them.
-      </p>
-      <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
-        Read More <i class="fa-solid fa-arrow-right"></i>
-      </p>
-    </div>
+        <!-- Blog Grid -->
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10"
+        >
+          <!-- Blog Post 1 -->
+          <div class="mt-10">
+            <img
+              class="rounded-2xl w-full"
+              src="./img/image copy 13.png"
+              alt=""
+            />
+            <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
+            <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+              Navigating the Mind
+            </p>
+            <p class="text-[#525b52] mt-2 text-sm">
+              Covering insights into understanding mental processes and
+              practical ways to manage them.
+            </p>
+            <p
+              class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
 
-    <!-- Blog Post 2 -->
-    <div class="mt-10">
-      <img class="rounded-2xl w-full" src="./img/image copy 14.png" alt="">
-      <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
-      <p class="text-2xl mt-2 text-[#163c3f] font-semibold">Unraveling the Psyche</p>
-      <p class="text-[#525b52] mt-2 text-sm">
-        Exploring deeper layers of the mind and offering tools for mental and emotional growth.
-      </p>
-      <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
-        Read More <i class="fa-solid fa-arrow-right"></i>
-      </p>
-    </div>
+          <!-- Blog Post 2 -->
+          <div class="mt-10">
+            <img
+              class="rounded-2xl w-full"
+              src="./img/image copy 14.png"
+              alt=""
+            />
+            <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
+            <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+              Unraveling the Psyche
+            </p>
+            <p class="text-[#525b52] mt-2 text-sm">
+              Exploring deeper layers of the mind and offering tools for mental
+              and emotional growth.
+            </p>
+            <p
+              class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
 
-    <!-- Blog Post 3 (centered on md) -->
-    <div class="mt-10 md:col-span-2 flex justify-center lg:col-span-1">
-      <div class="w-full md:w-1/2 lg:w-full">
-        <img class="rounded-2xl w-full" src="./img/image copy 15.png" alt="">
-        <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
-        <p class="text-2xl mt-2 text-[#163c3f] font-semibold">Beyond the Couch</p>
-        <p class="text-[#525b52] mt-2 text-sm">
-          Examining relationships through therapy and offering advice on emotional connection.
-        </p>
-        <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
-          Read More <i class="fa-solid fa-arrow-right"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-<!-- footer -->
-<footer class="bg-[#163c3e] text-white mt-20">
-  <div class="max-w-[1400px] mx-auto px-6">
+          <!-- Blog Post 3 (centered on md) -->
+          <div class="mt-10 md:col-span-2 flex justify-center lg:col-span-1">
+            <div class="w-full md:w-1/2 lg:w-full">
+              <img
+                class="rounded-2xl w-full"
+                src="./img/image copy 15.png"
+                alt=""
+              />
+              <p class="manrope font-medium mt-4 text-[#163c3f]">
+                Mental Health
+              </p>
+              <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+                Beyond the Couch
+              </p>
+              <p class="text-[#525b52] mt-2 text-sm">
+                Examining relationships through therapy and offering advice on
+                emotional connection.
+              </p>
+              <p
+                class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline"
+              >
+                Read More <i class="fa-solid fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="bg-[#163c3e] text-white mt-20">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col items-center text-center pt-28">
+          <h2 class="text-3xl md:text-4xl font-medium">
+            Don't Hesitate, Contact Us
+          </h2>
+          <p class="mt-4 text-sm md:text-base text-gray-200">
+            Your Journey to Emotional Wellness Starts Here
+          </p>
+          <button
+            class="mt-8 bg-white text-[#163c3e] px-6 py-3 rounded-lg hover:bg-[#163c3e] hover:text-white border border-white transition"
+          >
+            Contact Us
+          </button>
+        </div>
 
-    
-    <div class="flex flex-col items-center text-center pt-28">
-      <h2 class="text-3xl md:text-4xl font-medium">
-        Don't Hesitate, Contact Us
-      </h2>
-      <p class="mt-4 text-sm md:text-base text-gray-200">
-        Your Journey to Emotional Wellness Starts Here
-      </p>
-      <button
-        class="mt-8 bg-white text-[#163c3e] px-6 py-3 rounded-lg
-               hover:bg-[#163c3e] hover:text-white border border-white transition"
-      >
-        Contact Us
-      </button>
-    </div>
+        <hr class="my-20 border-[#485367]" />
 
-   
-    <hr class="my-20 border-[#485367]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="max-w-md text-gray-200">
+              Design amazing digital experiences that <br />
+              create more happy in the world.
+            </p>
 
-   
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <ul class="flex gap-8 mt-10 font-medium text-sm">
+              <li class="hover:underline cursor-pointer">About</li>
+              <li class="hover:underline cursor-pointer">Services</li>
+              <li class="hover:underline cursor-pointer">Pricing</li>
+              <li class="hover:underline cursor-pointer">Sessions</li>
+              <li class="hover:underline cursor-pointer">Appointment</li>
+            </ul>
+          </div>
 
-     
-      <div>
-        <p class="max-w-md text-gray-200">
-          Design amazing digital experiences that <br />
-          create more happy in the world.
-        </p>
+          <div>
+            <p class="mb-6 font-medium">@instagram</p>
+            <div class="flex gap-4">
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 16.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 19.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 20.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 21.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 24.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 25.png"
+              />
+            </div>
+          </div>
+        </div>
 
-        <ul class="flex gap-8 mt-10 font-medium text-sm">
-          <li class="hover:underline cursor-pointer">About</li>
-          <li class="hover:underline cursor-pointer">Services</li>
-          <li class="hover:underline cursor-pointer">Pricing</li>
-          <li class="hover:underline cursor-pointer">Sessions</li>
-          <li class="hover:underline cursor-pointer">Appointment</li>
-        </ul>
-      </div>
+        <hr class="my-16 border-[#485367]" />
 
-     
-      <div>
-        <p class="mb-6 font-medium">@instagram</p>
-        <div class="flex gap-4">
-          <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 16.png" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 19.png" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 20.png" />
-            <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 21.png" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 24.png" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="./img/image copy 25.png" />
+        <!-- Bottom Footer -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm pb-8 text-gray-300"
+        >
+          <p>© Psychologist. All Rights Reserved 2024.</p>
+          <p>Designed by fourtwelve.</p>
         </div>
       </div>
-
-    </div>
-
-    
-    <hr class="my-16 border-[#485367]">
-
-    <!-- Bottom Footer -->
-    <div class="flex flex-col md:flex-row justify-between items-center text-sm pb-8 text-gray-300">
-      <p>© Psychologist. All Rights Reserved 2024.</p>
-      <p>Designed by fourtwelve.</p>
-    </div>
-
-  </div>
-
-
-
-
-</footer>
+    </footer>
 
     <script>
       const btn = document.getElementById("menu-btn");

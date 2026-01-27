@@ -33,5 +33,9 @@ closeBtn.addEventListener("click", () => {
     body.style.overflow = "auto";
     overlay.style.display = "none";
     header.style.zIndex = "50";
+<<<<<<< HEAD
 });
 
+=======
+});
+>>>>>>> ccb2ce2b07d5d737529032f680f4802f03270ecc

@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const btn = document.getElementById("menu-btn");
 =======
 
       const btn = document.getElementById("menu-btn");
 >>>>>>> a21b0e8a50bc4d88081da20570837cf26bd88c3a
+=======
+const btn = document.getElementById("menu-btn");
+>>>>>>> 92cbc735a6d3d09e11eb87d38b0c467908d01e5c
       const menu = document.getElementById("mobile-menu");
       const nav = document.getElementById("navbar");
 
@@ -15,6 +19,9 @@ const btn = document.getElementById("menu-btn");
           nav.classList.toggle("bg-white");
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 92cbc735a6d3d09e11eb87d38b0c467908d01e5c
 });
 
 let videoPlayed =  document.getElementById("videoDis");
@@ -40,6 +47,7 @@ closeBtn.addEventListener("click", () => {
     overlay.style.display = "none";
     header.style.zIndex = "50";
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 
 =======
@@ -48,3 +56,6 @@ closeBtn.addEventListener("click", () => {
 =======
       });
 >>>>>>> a21b0e8a50bc4d88081da20570837cf26bd88c3a
+=======
+});
+>>>>>>> 92cbc735a6d3d09e11eb87d38b0c467908d01e5c

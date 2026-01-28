@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couple Counseling</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- App -->
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav id="navbar" class="transition-colors duration-300 fixed top-0 left-0 w-full z-50 bg-[white]" data-aos="fade-up"
+      data-aos-duration="1000" data-aos-delay="300" data-aos-offset="200">
+      <div class="max-w-screen-2xl mx-auto px-4 h-20 flex items-center">
+        <div class="flex items-center gap-10">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2">
+            <img class="color-white" src="https://framerusercontent.com/images/dPozcfikS4lOyibXT8KnSt9prqY.svg"
+              width="150px" />
+          </a>
+          <!-- Desktop Menu -->
+          <ul class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]">
+            <li><a href="#" class="hover:text-[#5d7676]">Home</a></li>
+            <li><a href="#" class="hover:text-[#5d7676]">About Us</a></li>
+            <li><a href="#" class="hover:text-[#5d7676]">Services</a></li>
+            <li><a href="#" class="hover:text-[#5d7676]">Sessions</a></li>
+          </ul>
+        </div>
+        <div class="ml-auto hidden lg:flex items-center gap-6 text-[#163c3e]">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
+          </span>
+          <button class="border-[#163c3e] px-5 py-2 rounded-lg hover:bg-[#163c3e] hover:text-white transition">
+            Contact Us
+          </button>
+        </div>
+        <!-- mobile btn -->
+        <button id="menu-btn" class="ml-auto lg:hidden text-2xl text-[#163c3e]">
+          ☰
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div id="mobile-menu" class="hidden lg:hidden px-6 pb-6">
+        <ul class="flex flex-col gap-4 text-lg text-[#163c3e]">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Sessions</a></li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
+          </li>
+          <li>
+            <button class="w-[150px] border border-[#163c3e] py-2 rounded-lg">
+              Contact Us
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--  -->
+  <!-- Content -->
+
+
+  <!-- Background image -->
+
+  <main class="mt-20">
+
+    <section class="bg-[#eef5ee] py-16 ">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
+          Magical & Inspirational Lessons For<br />
+          People Seeking Help
+        </h2>
+
+        <!-- Image -->
+        <div class="mb-14">
+          <img src="../img/Take.jpg" alt="Therapy session" class="rounded-xl w-full object-cover" />
+        </div>
+
+        <!-- Cards -->
+        <section class="w-full max-w-[1500px] mx-auto text-[#163d40] mt-10 lg:mt-20 px-4" data-aos="fade-up"
+          data-aos-duration="1000" data-aos-delay="300" data-aos-offset="200">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg">
+              <img class="mx-auto w-20 md:w-24 lg:w-28 mt-4" src="../img/Header11.jpg" alt="" />
+              <p class="manrope text-xl font-semibold mt-4">
+                Personal & Individual <br />
+                Therapy
+              </p>
+              <p class="manrope text-base mt-2 text-gray-600">
+                Offers personalized one-on-one sessions to help individuals
+                overcome personal challenges and enhance their well-being.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items -center text-center p-4 bg-gray-50 rounded-lg">
+              <img class="mx-auto w-20 md:w-24 lg:w-21 mt-4 bg-amber-300" src="../img/header12.jpg" alt="" />
+              <p class="manrope text-xl font-semibold mt-4">
+                Special Session for <br />
+                Your Kids
+              </p>
+              <p class="manrope text-base mt-2 text-gray-600">
+                Provides therapy for children, supporting their emotional
+                growth and helping them navigate behavioral challenges.
+              </p>
+            </div>
+
+            <!-- Card 3 (center only on md) -->
+            <div
+              class="flex flex-col items-center text-center p-4 md:col-span-2 md:justify-center md:flex md:items-center lg:col-span-1 lg:justify-start bg-gray-50 rounded-lg">
+              <img class="mx-auto w-20 md:w-24 lg:w-29 mt-4" src="../img/header13.jpg" alt="" />
+              <p class="manrope text-xl font-semibold mt-4">
+                Boost the Business <br />
+                Outcome
+              </p>
+              <p class="manrope text-base mt-2 text-gray-600">
+                Applies psychological techniques to improve team
+                collaboration, enhance leadership, and drive better business
+                results.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+        data-aos-offset="200">
+        <!-- Top Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Left Text -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-semibold text-[#0f2f2f] mb-6">
+              Navigating Life with a<br />
+              Psychologist's Perspective
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed max-w-xl">
+              Life is a journey filled with a myriad of experiences,
+              challenges, and opportunities for growth. In this blog, we
+              embark on a unique exploration of life’s twists and turns
+              through the lens of a psychologist’s perspective. Join us on a
+              transformative voyage as we delve into the complexities of the
+              human mind, unravel the mysteries of behavior, and offer
+              insights that can guide you towards a more mindful and resilient
+              existence.
+            </p>
+          </div>
+
+          <!-- Right Card -->
+          <div class="bg-[#163f3f] text-white rounded-xl p-8 max-w-md text-3xl">
+            <h3 class="text-lg font-semibold mb-4">What We Do</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                Mindfulness in Daily Living
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                Relationship Dynamics
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                Behind the Therapist's Door
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                Research Highlights
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                Fostering Understanding
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center">
+          <div>
+            <h4 class="text-3xl font-semibold text-black">22</h4>
+            <p class="text-sm text-gray-600">Experts</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-semibold text-black">30+</h4>
+            <p class="text-sm text-gray-600">Years of Experience</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-semibold text-black">895+</h4>
+            <p class="text-sm text-gray-600">Happy clients</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-semibold text-black">425+</h4>
+            <p class="text-sm text-gray-600">Success story</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#e9f2e4] py-16">
+  <div class="mx-auto px-6 max-w-5xl">
+    
+    <!-- Title -->
+    <h2 class="font-semibold text-gray-800 mb-8 text-2xl md:text-3xl">
+      What Our Clients Say
+    </h2>
+
+    <!-- Testimonial Card -->
+    <div
+      class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+      data-aos-offset="200"
+    >
+
+      <!-- Avatar -->
+      <div class="flex items-center gap-4 w-full lg:w-1/3">
+        <img
+          src="../img/smile.jpg"
+          alt="Liam Roberts"
+          class="w-14 h-14 md:w-16 md:h-16 rounded-lg object-cover"
+        />
+
+        <div class="flex flex-col">
+          <h3 class="font-semibold text-gray-900 text-base md:text-lg">
+            Liam Roberts
+          </h3>
+          <span class="text-gray-500 text-sm md:text-base">
+            Entrepreneur
+          </span>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <p class="text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl w-full lg:w-2/3">
+        “Therapy provided me with the tools I needed to manage my anxiety. I now feel more in control of my emotions and life. It has truly empowered me to handle challenges with confidence.”
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- btn -->
+    <section class="lg:w-[1500px] mx-auto mt-20 px-4">
+      <!-- Header: Title + Button -->
+      <div class="flex flex-col lg:flex-row items-center lg:justify-between">
+        <!-- Text -->
+        <div class="text-center lg:text-left mb-6 lg:mb-0">
+          <h1 class="text-3xl md:text-4xl lg:text-4xl font-medium text-[#153b3d]">
+            Recent Sessions
+          </h1>
+          <p class="mt-3 manrope text-gray-600 text-base md:text-lg">
+            Stay informed about the latest research in psychology.
+          </p>
+        </div>
+        <!-- Button -->
+        <div>
+          <button
+            class="bg-[#163c3e] px-5 py-2 rounded-lg border border-[#163c3e] text-white hover:bg-white hover:text-[#163c3e] transition">
+            View All Sessions
+          </button>
+        </div>
+      </div>
+      <!-- Blog Grid -->
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10" data-aos="fade-up"
+        data-aos-duration="1000" data-aos-delay="300" data-aos-offset="200">
+        <!-- Blog Post 1 -->
+        <div class="mt-10">
+          <img class="rounded-2xl w-full" src="../img/photohand.png" alt="" />
+          <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
+          <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+            Navigating the Mind
+          </p>
+          <p class="text-[#525b52] mt-2 text-sm">
+            Covering insights into understanding mental processes and
+            practical ways to manage them.
+          </p>
+          <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="mt-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-offset="200">
+          <img class="rounded-2xl w-full" src="../img/photosmile.png" alt="" />
+          <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
+          <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+            Unraveling the Psyche
+          </p>
+          <p class="text-[#525b52] mt-2 text-sm">
+            Exploring deeper layers of the mind and offering tools for mental
+            and emotional growth.
+          </p>
+          <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </div>
+
+        <!-- Blog Post 3 (centered on md) -->
+        <div class="mt-10 md:col-span-2 flex justify-center lg:col-span-1" data-aos="fade-up" data-aos-duration="1000"
+          data-aos-delay="300" data-aos-offset="200">
+          <div class="w-full md:w-1/2 lg:w-full">
+            <img class="rounded-2xl w-full" src="../img/photowhite.png" alt="" />
+            <p class="manrope font-medium mt-4 text-[#163c3f]">
+              Mental Health
+            </p>
+            <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
+              Beyond the Couch
+            </p>
+            <p class="text-[#525b52] mt-2 text-sm">
+              Examining relationships through therapy and offering advice on
+              emotional connection.
+            </p>
+            <p class="font-medium mt-4 text-[#163c3f] cursor-pointer hover:underline">
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#163c3e] text-white mt-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+      data-aos-offset="200">
+
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col items-center text-center pt-28">
+          <h2 class="text-3xl md:text-4xl font-medium">
+            Don't Hesitate, Contact Us
+          </h2>
+          <p class="mt-4 text-sm md:text-base text-gray-200">
+            Your Journey to Emotional Wellness Starts Here
+          </p>
+          <button
+            class="mt-8 bg-white text-[#163c3e] px-6 py-3 rounded-lg hover:bg-[#163c3e] hover:text-white border border-white transition">
+            Contact Us
+          </button>
+        </div>
+
+        <hr class="my-20 border-[#485367]" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="max-w-md text-gray-200">
+              Design amazing digital experiences that <br />
+              create more happy in the world.
+            </p>
+
+            <ul class="flex gap-8 mt-10 font-medium text-sm">
+              <li class="hover:underline cursor-pointer">About</li>
+              <li class="hover:underline cursor-pointer">Services</li>
+              <li class="hover:underline cursor-pointer">Pricing</li>
+              <li class="hover:underline cursor-pointer">Sessions</li>
+              <li class="hover:underline cursor-pointer">Appointment</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="mb-6 font-medium ">@instagram</p>
+            <div class="flex gap-4 flex-wrap">
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img1.png" />
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img2.avif" />
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img3.png" />
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img4 copy.avif" />
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img5 copy.avif" />
+              <img class="w-14 h-14 rounded-lg object-cover" src="../img/img5 copy.avif" />
+            </div>
+          </div>
+        </div>
+        <hr class="my-16 border-[#485367]" />
+        <!-- Bottom Footer -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm pb-8 text-gray-300">
+          <p>© Psychologist. All Rights Reserved 2024.</p>
+          <p>Designed by fourtwelve.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>

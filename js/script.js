@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 const btn = document.getElementById("menu-btn");
+=======
+
+      const btn = document.getElementById("menu-btn");
+>>>>>>> a21b0e8a50bc4d88081da20570837cf26bd88c3a
       const menu = document.getElementById("mobile-menu");
       const nav = document.getElementById("navbar");
 
@@ -9,6 +14,7 @@ const btn = document.getElementById("menu-btn");
           nav.classList.toggle("bg-[#e1ecde]");
           nav.classList.toggle("bg-white");
         }
+<<<<<<< HEAD
 });
 
 let videoPlayed =  document.getElementById("videoDis");
@@ -39,3 +45,6 @@ closeBtn.addEventListener("click", () => {
 =======
 });
 >>>>>>> ccb2ce2b07d5d737529032f680f4802f03270ecc
+=======
+      });
+>>>>>>> a21b0e8a50bc4d88081da20570837cf26bd88c3a

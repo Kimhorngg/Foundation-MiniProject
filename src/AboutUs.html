@@ -87,18 +87,41 @@
   <main>
 
     <!-- banner -->
-       <section class="relative h-[400px] w-full flex items-center">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://framerusercontent.com/images/hSFXAL0Dtc7m1UoU5U3iemNHz7M.jpg');"></div>
-        <div class=" absolute inset-0  bg-opacity-40"></div>
-        <div class="relative z-10 w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
-            <div class="flex items-center justify-center md:justify-start" data-aos="fade-right">
-                <h1 class="text-4xl md:text-5xl font-bold">Sessions</h1>
-            </div>
-            <div class="flex items-center justify-center md:justify-start" data-aos="fade-left">
-                <p class="text-lg md:text-xl leading-relaxed">Exploring various psychological concepts, theories, and research findings in an accessible way.</p>
-            </div>
-        </div>
-    </section>
+     <section class="relative min-h-[300px] md:min-h-[400px] w-full flex items-center">
+  
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('https://framerusercontent.com/images/hSFXAL0Dtc7m1UoU5U3iemNHz7M.jpg');">
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 w-full max-w-6xl mx-auto px-6
+           grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12
+           text-white text-center md:text-left"
+  >
+    
+    <!-- Title -->
+    <div class="flex items-center justify-center md:justify-start" data-aos="fade-right">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold">
+        Sessions
+      </h1>
+    </div>
+
+    <!-- Description -->
+    <div class="flex items-center justify-center md:justify-start" data-aos="fade-left">
+      <p class="text-base sm:text-lg md:text-xl leading-relaxed max-w-md md:max-w-none">
+        Exploring various psychological concepts, theories, and research findings in an accessible way.
+      </p>
+    </div>
+
+  </div>
+</section>
+
     <!-- content -->
     <section class="bg-[#eef5ee] py-16 ">
       <div class="max-w-6xl mx-auto px-4">
@@ -303,10 +326,11 @@
         </div>
       </div>
       <!-- Blog Grid -->
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10" data-aos="fade-up"
-        data-aos-duration="1000" data-aos-delay="300" data-aos-offset="200">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10"
+       >
         <!-- Blog Post 1 -->
-        <div class="mt-10">
+        <div class="mt-10" data-aos="fade-up"
+        data-aos-duration="500" data-aos-delay="300" data-aos-offset="200">
           <img class="rounded-2xl w-full" src="../img/photohand.png" alt="" />
           <p class="manrope font-medium mt-4 text-[#163c3f]">Mental Health</p>
           <p class="text-2xl mt-2 text-[#163c3f] font-semibold">
@@ -338,7 +362,7 @@
         </div>
 
         <!-- Blog Post 3 (centered on md) -->
-        <div class="mt-10 md:col-span-2 flex justify-center lg:col-span-1" data-aos="fade-up" data-aos-duration="1000"
+        <div class="mt-10 md:col-span-2 flex justify-center lg:col-span-1" data-aos="fade-down" data-aos-duration="1000"
           data-aos-delay="300" data-aos-offset="200">
           <div class="w-full md:w-1/2 lg:w-full">
             <img class="rounded-2xl w-full" src="../img/photowhite.png" alt="" />
@@ -362,10 +386,7 @@
 
    <!-- footer -->
 <footer
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="300"
-      data-aos-offset="200"
+     
       class="bg-[#163c3e] text-white mt-10"
     >
       <div class="max-w-[1400px] mx-auto px-6">

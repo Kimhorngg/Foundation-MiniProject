@@ -117,131 +117,123 @@
         height: 300px;
       }
 
-      .btn-slide:hover {
-        transform: translateX(5px);
-      }
-
-      /* Mobile phones (up to 640px) */
-      @media (max-width: 640px) {
-        body {
-          padding: 1rem;
+.btn-slide:hover {
+    transform: translateX(5px);
+}
+       
+        
+        
+        /* Mobile phones (up to 640px) */
+        @media (max-width: 640px) {
+            .toggle-btn {
+                padding: 0.625rem;
+            }
+            .toggle-btn svg {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+            .header-text.main-title {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+            .header-text.section-title {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            .subtext {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+            .service-box {
+                padding: 1.5rem;
+                border-radius: 1.5rem;
+            }
+            .service-item {
+                font-size: 0.875rem;
+                padding: 0.5rem 0;
+            }
+            .services-row {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
-        .toggle-btn {
-          padding: 0.625rem;
+        
+        /* Tablets (641px to 1024px) */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .toggle-btn {
+                padding: 0.75rem;
+            }
+            .toggle-btn svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .header-text.main-title {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+            .header-text.section-title {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+            .subtext {
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+            }
+            .service-box {
+                padding: 2rem;
+                border-radius: 2rem;
+            }
+            .service-item {
+                font-size: 0.9375rem;
+            }
+            .services-row {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
         }
-        .toggle-btn svg {
-          width: 1.25rem;
-          height: 1.25rem;
+        
+        /* Desktop (1025px and above) */
+        @media (min-width: 1025px) {
+            .toggle-btn {
+                padding: 0.75rem;
+            }
+            .toggle-btn svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .header-text.main-title {
+                font-size: 3rem;
+                line-height: 1;
+            }
+            .header-text.section-title {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+            .subtext {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+            .service-box {
+                padding: 3rem;
+                border-radius: 1.5rem;
+            }
+            .service-item {
+                font-size: 1rem;
+            }
+            .services-row {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+            .header-section {
+                flex-direction: row;
+            }
         }
-        .header-text.main-title {
-          font-size: 1.875rem;
-          line-height: 2.25rem;
-        }
-        .header-text.section-title {
-          font-size: 1.5rem;
-          line-height: 2rem;
-        }
-        .subtext {
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-        }
-        .service-box {
-          padding: 1.5rem;
-          border-radius: 1.5rem;
-        }
-        .service-item {
-          font-size: 0.875rem;
-          padding: 0.5rem 0;
-        }
-        .services-row {
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-      }
-
-      /* Tablets (641px to 1024px) */
-      @media (min-width: 641px) and (max-width: 1024px) {
-        body {
-          padding: 1.5rem;
-        }
-        .toggle-btn {
-          padding: 0.75rem;
-        }
-        .toggle-btn svg {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
-        .header-text.main-title {
-          font-size: 2.25rem;
-          line-height: 2.5rem;
-        }
-        .header-text.section-title {
-          font-size: 1.875rem;
-          line-height: 2.25rem;
-        }
-        .subtext {
-          font-size: 0.875rem;
-          line-height: 1.5rem;
-        }
-        .service-box {
-          padding: 2rem;
-          border-radius: 2rem;
-        }
-        .service-item {
-          font-size: 0.9375rem;
-        }
-        .services-row {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-      }
-
-      /* Desktop (1025px and above) */
-      @media (min-width: 1025px) {
-        body {
-          padding: 2rem;
-        }
-        .toggle-btn {
-          padding: 0.75rem;
-        }
-        .toggle-btn svg {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
-        .header-text.main-title {
-          font-size: 3rem;
-          line-height: 1;
-        }
-        .header-text.section-title {
-          font-size: 2.25rem;
-          line-height: 2.5rem;
-        }
-        .subtext {
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-        .service-box {
-          padding: 3rem;
-          border-radius: 1.5rem;
-        }
-        .service-item {
-          font-size: 1rem;
-        }
-        .services-row {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 2rem;
-        }
-        .header-section {
-          flex-direction: row;
-        }
-      }
     </style>
-  </head>
-  <body
-    class="light-mode transition-colors duration-900 mt-4""
-  >
+</head>
+<body class="light-mode transition-colors duration-300  ">
+
     <header>
       <nav
         id="navbar"

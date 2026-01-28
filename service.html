@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -15,9 +15,9 @@
       referrerpolicy="no-referrer"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     />
-    
+
     <style>
-        h1 {
+      h1 {
         font-family: "Poppins", sans-serif;
         .manrope {
           font-family: "Manrope", sans-serif;
@@ -25,214 +25,233 @@
       }
 
       @keyframes fadeInUp {
-    from {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Stagger delays */
+      .delay-100 {
+        animation-delay: 0.1s;
         opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+      .delay-300 {
+        animation-delay: 0.3s;
+        opacity: 0;
+      }
+      .delay-400 {
+        animation-delay: 0.4s;
+        opacity: 0;
+      }
+      .delay-500 {
+        animation-delay: 0.5s;
+        opacity: 0;
+      }
+      .delay-600 {
+        animation-delay: 0.6s;
+        opacity: 0;
+      }
 
-.fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
+      /* Card Hover Effect */
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+      }
 
-/* Stagger delays */
-.delay-100 { animation-delay: 0.1s; opacity: 0; }
-.delay-200 { animation-delay: 0.2s; opacity: 0; }
-.delay-300 { animation-delay: 0.3s; opacity: 0; }
-.delay-400 { animation-delay: 0.4s; opacity: 0; }
-.delay-500 { animation-delay: 0.5s; opacity: 0; }
-.delay-600 { animation-delay: 0.6s; opacity: 0; }
+      .card-hover:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
 
-/* Card Hover Effect */
-.card-hover {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-}
+      /* Image Zoom on Hover */
+      .img-zoom-container {
+        overflow: hidden;
+        border-radius: 1rem;
+      }
 
-.card-hover:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
+      .img-zoom {
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
 
-/* Image Zoom on Hover */
-.img-zoom-container {
-    overflow: hidden;
-    border-radius: 1rem;
-}
+      .img-zoom-container:hover .img-zoom {
+        transform: scale(1.08);
+      }
 
-.img-zoom {
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Button Hover Animation */
+      .btn-slide {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
 
-.img-zoom-container:hover .img-zoom {
-    transform: scale(1.08);
-}
+      .btn-slide::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.6s,
+          height 0.6s;
+      }
 
-/* Button Hover Animation */
-.btn-slide {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+      .btn-slide:hover::after {
+        width: 300px;
+        height: 300px;
+      }
 
-.btn-slide::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
+      .btn-slide:hover {
+        transform: translateX(5px);
+      }
 
-.btn-slide:hover::after {
-    width: 300px;
-    height: 300px;
-}
-
-.btn-slide:hover {
-    transform: translateX(5px);
-}
-       
-        
-        
-        /* Mobile phones (up to 640px) */
-        @media (max-width: 640px) {
-            body {
-                padding: 1rem;
-            }
-            .toggle-btn {
-                padding: 0.625rem;
-            }
-            .toggle-btn svg {
-                width: 1.25rem;
-                height: 1.25rem;
-            }
-            .header-text.main-title {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            .header-text.section-title {
-                font-size: 1.5rem;
-                line-height: 2rem;
-            }
-            .subtext {
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-            }
-            .service-box {
-                padding: 1.5rem;
-                border-radius: 1.5rem;
-            }
-            .service-item {
-                font-size: 0.875rem;
-                padding: 0.5rem 0;
-            }
-            .services-row {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+      /* Mobile phones (up to 640px) */
+      @media (max-width: 640px) {
+        body {
+          padding: 1rem;
         }
-        
-        /* Tablets (641px to 1024px) */
-        @media (min-width: 641px) and (max-width: 1024px) {
-            body {
-                padding: 1.5rem;
-            }
-            .toggle-btn {
-                padding: 0.75rem;
-            }
-            .toggle-btn svg {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            .header-text.main-title {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-            .header-text.section-title {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            .subtext {
-                font-size: 0.875rem;
-                line-height: 1.5rem;
-            }
-            .service-box {
-                padding: 2rem;
-                border-radius: 2rem;
-            }
-            .service-item {
-                font-size: 0.9375rem;
-            }
-            .services-row {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
+        .toggle-btn {
+          padding: 0.625rem;
         }
-        
-        /* Desktop (1025px and above) */
-        @media (min-width: 1025px) {
-            body {
-                padding: 2rem;
-            }
-            .toggle-btn {
-                padding: 0.75rem;
-            }
-            .toggle-btn svg {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            .header-text.main-title {
-                font-size: 3rem;
-                line-height: 1;
-            }
-            .header-text.section-title {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-            .subtext {
-                font-size: 1rem;
-                line-height: 1.5rem;
-            }
-            .service-box {
-                padding: 3rem;
-                border-radius: 1.5rem;
-            }
-            .service-item {
-                font-size: 1rem;
-            }
-            .services-row {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 2rem;
-            }
-            .header-section {
-                flex-direction: row;
-            }
+        .toggle-btn svg {
+          width: 1.25rem;
+          height: 1.25rem;
         }
+        .header-text.main-title {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+        .header-text.section-title {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        .subtext {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+        .service-box {
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+        }
+        .service-item {
+          font-size: 0.875rem;
+          padding: 0.5rem 0;
+        }
+        .services-row {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      /* Tablets (641px to 1024px) */
+      @media (min-width: 641px) and (max-width: 1024px) {
+        body {
+          padding: 1.5rem;
+        }
+        .toggle-btn {
+          padding: 0.75rem;
+        }
+        .toggle-btn svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .header-text.main-title {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+        .header-text.section-title {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+        .subtext {
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+        }
+        .service-box {
+          padding: 2rem;
+          border-radius: 2rem;
+        }
+        .service-item {
+          font-size: 0.9375rem;
+        }
+        .services-row {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+
+      /* Desktop (1025px and above) */
+      @media (min-width: 1025px) {
+        body {
+          padding: 2rem;
+        }
+        .toggle-btn {
+          padding: 0.75rem;
+        }
+        .toggle-btn svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .header-text.main-title {
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .header-text.section-title {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+        .subtext {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        .service-box {
+          padding: 3rem;
+          border-radius: 1.5rem;
+        }
+        .service-item {
+          font-size: 1rem;
+        }
+        .services-row {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+        .header-section {
+          flex-direction: row;
+        }
+      }
     </style>
-</head>
-<body class="light-mode p-4 sm:p-6 lg:p-8 transition-colors duration-300 mt-4">
-
+  </head>
+  <body
+    class="light-mode transition-colors duration-900 mt-4""
+  >
     <header>
       <nav
         id="navbar"
         class="transition-colors duration-300 fixed top-0 left-0 w-full z-50 bg-white"
       >
-        <div class="max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 h-20 flex items-center">
+        <div class="max-w-screen-2xl mx-auto px-4 h-20 flex items-center">
           <div class="flex items-center gap-10">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-              <img src="./logo.png" width="45" />
+              <img src="./img/image.png" width="45" />
               <span class="text-xl font-medium text-[#163c3e]">
                 Psychologist
               </span>
@@ -241,10 +260,10 @@
             <ul
               class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]"
             >
-              <li><a href="#" class="hover:text-[#5d7676]">Home</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">About Us</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Services</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Sessions</a></li>
+              <li><a href="index.html" class="hover:text-[#5d7676]">Home</a></li>
+              <li><a href="" class="hover:text-[#5d7676]">About Us</a></li>
+              <li><a href="service.html" class="hover:text-[#5d7676]">Services</a></li>
+              <li><a href="Sessions.html" class="hover:text-[#5d7676]">Sessions</a></li>
             </ul>
           </div>
           <div class="ml-auto hidden lg:flex items-center gap-6 text-[#163c3e]">
@@ -276,7 +295,7 @@
               <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
             </li>
             <li>
-              <button class="w-37.5 border border-[#163c3e] py-2 rounded-lg">
+              <button class="w-[150px] border border-[#163c3e] py-2 rounded-lg">
                 Contact Us
               </button>
             </li>
@@ -285,462 +304,687 @@
       </nav>
     </header>
     <div data-aos="fade-up">
-    <div class="max-w-7xl mx-auto">
+      <div class="w-full px-0 ">
         <!-- Header Section -->
-        <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-end border-b border-gray-200">
-    <h1 class="text-6xl font-serif text-[#1a3a3a] leading-tight">
-        Our Services
-    </h1>
+        <div
+          class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-end border-b border-gray-200"
+        >
+          <h1 class="text-6xl font-serif text-[#1a3a3a] leading-tight">
+            Our Services
+          </h1>
 
-    <p class="max-w-md text-gray-600 text-lg mb-2 md:text-right">
-        Exploring various psychological concepts, theories, and research findings in an accessible way.
-    </p>
+          <p class="max-w-md text-gray-600 text-lg mb-2 md:text-right">
+            Exploring various psychological concepts, theories, and research
+            findings in an accessible way.
+          </p>
         </div>
         <!-- What We Do Section -->
-        <div class="service-box transition-colors duration-300 bg-[#e2eddf]">
-            <h2 class="header-text section-title font-semibold text-center mb-8">What We Do</h2>
-            
-            <!-- Services Grid -->
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <!-- First Row -->
-                <div class="services-row flex items-center justify-center">
-                    <div class="service-item text-center sm:text-left">• Mindfulness in Daily Living</div>
-                    <div class="service-item text-center sm:text-left">• Behind the Therapist's Door</div>
-                    <div class="service-item text-center sm:text-left">• Research Highlights</div>
-                    <div class="service-item text-center sm:text-left">• Fostering Understanding</div>
-                </div>
-                
-                <!-- Second Row -->
-                <div class="services-row flex items-center justify-center">
-                    <div class="service-item text-center sm:text-left">• Relationship Dynamics</div>
-                    <div class="service-item text-center sm:text-left">• Forensic Psychology</div>
-                    <div class="service-item text-center sm:text-left">• Continuing Education</div>
-                </div>
+        <div class="service-box transition-colors duration-900 bg-[#e2eddf]">
+          <h2 class="header-text section-title font-semibold text-center mb-8 text-[#1a3a3a]">
+            What We Do
+          </h2>
+
+          <!-- Services Grid -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem">
+            <!-- First Row -->
+            <div class="services-row flex items-center justify-center text-[#515b51]">
+              <div class="service-item text-center sm:text-left">
+                • Mindfulness in Daily Living
+              </div>
+              <div class="service-item text-center sm:text-left">
+                • Behind the Therapist's Door
+              </div>
+              <div class="service-item text-center sm:text-left">
+                • Research Highlights
+              </div>
+              <div class="service-item text-center sm:text-left">
+                • Fostering Understanding
+              </div>
             </div>
+
+            <!-- Second Row -->
+            <div class="services-row flex items-center justify-center text-[#515b51]">
+              <div class="service-item text-center sm:text-left">
+                • Relationship Dynamics
+              </div>
+              <div class="service-item text-center sm:text-left">
+                • Forensic Psychology
+              </div>
+              <div class="service-item text-center sm:text-left">
+                • Continuing Education
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
     <!-- Therapy Services Section -->
     <div class="bg-teal-900 min-h-screen p-8 mt-8">
-    <div class="max-w-7xl mx-auto">
+      <div class="max-w-7xl mx-auto">
         <!-- Row 1 -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <!-- Personal & Individual Therapy -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-100">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/5DzHaWfcavnfJYZB7Nyu1oiwXo.jpg" 
-                         alt="Two people in therapy session" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Personal & Individual Therapy</h2>
-                <p class="text-gray-300 mb-4">Offers personalized one-on-one sessions to help individuals overcome personal challenges and enhance their well-being.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Personal & Individual Therapy -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-100">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/5DzHaWfcavnfJYZB7Nyu1oiwXo.jpg"
+                alt="Two people in therapy session"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
             </div>
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Personal & Individual Therapy
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Offers personalized one-on-one sessions to help individuals
+              overcome personal challenges and enhance their well-being.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
+            >
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
 
-            <!-- Special Session for Your Kids -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-200">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/S2kyCW5V0prSOCcBAcVHgnEY1w.jpg" 
-                         alt="Child using tablet" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Special Session for Your Kids</h2>
-                <p class="text-gray-300 mb-4">Provides therapy for children, supporting their emotional growth and helping them navigate behavioral challenges.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Special Session for Your Kids -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-200">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/S2kyCW5V0prSOCcBAcVHgnEY1w.jpg"
+                alt="Child using tablet"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
             </div>
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Special Session for Your Kids
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Provides therapy for children, supporting their emotional growth
+              and helping them navigate behavioral challenges.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
+            >
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <!-- Row 2 -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <!-- Boost the Business Outcome -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-300">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/fMndYL2fXQlzQPZjyjty5kGthrw.jpg" 
-                         alt="Woman reading a book" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Boost the Business Outcome</h2>
-                <p class="text-gray-300 mb-4">Applies psychological techniques to improve team collaboration, enhance leadership, and drive better business results.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Boost the Business Outcome -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-300">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/fMndYL2fXQlzQPZjyjty5kGthrw.jpg"
+                alt="Woman reading a book"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
             </div>
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Boost the Business Outcome
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Applies psychological techniques to improve team collaboration,
+              enhance leadership, and drive better business results.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
+            >
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
 
-            <!-- Nurturing Mental Health -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-400">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/XAjuYGUipFlg7L0MuMTAZ7osOn8.jpg" 
-                         alt="Woman practicing mindfulness" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Nurturing Mental Health</h2>
-                <p class="text-gray-300 mb-4">Focused on promoting long-term emotional well-being through expert counseling and tailored mental health strategies.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Nurturing Mental Health -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-400">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/XAjuYGUipFlg7L0MuMTAZ7osOn8.jpg"
+                alt="Woman practicing mindfulness"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
             </div>
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Nurturing Mental Health
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Focused on promoting long-term emotional well-being through expert
+              counseling and tailored mental health strategies.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
+            >
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <!-- Row 3 -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Your Partner in Mental Wellness -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-500">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/SHfDgWUnWECue8rbPpzQR7GT4.jpg" 
-                         alt="Two people lying down together" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Your Partner in Mental Wellness</h2>
-                <p class="text-gray-300 mb-4">Offering ongoing support and personalized care to help you maintain a balanced and healthy mental state.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Your Partner in Mental Wellness -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-500">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/SHfDgWUnWECue8rbPpzQR7GT4.jpg"
+                alt="Two people lying down together"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
             </div>
-
-            <!-- Expert Guidance for Better Living -->
-            <div class="card-hover bg-teal-900 fade-in-up delay-600">
-                <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
-                    <img src="https://framerusercontent.com/images/SYZo22oGp76pywpdm0pCN3RtUIM.jpg" 
-                         alt="Team meeting" 
-                         class="img-zoom w-full max-h-96 object-cover">
-                </div>
-                <h2 class="text-white text-3xl font-serif mb-3">Expert Guidance for Better Living</h2>
-                <p class="text-gray-300 mb-4">Providing professional insights and therapeutic techniques to empower you for a happier, more fulfilling life.</p>
-                <a href="#" class="btn-slide text-white inline-flex items-center hover:underline">
-                    Learn More 
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class=" flex items-center justify-center p-4 mt-8" data-aos="fade-up">
-         <div class="w-full max-w-125 bg-linear-to-br bg-[#e2eddf] to-blue-50 rounded-3xl p-8 md:p-12">
-        <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2">
-            Submit Your Details to Book
-        </h1>
-        <h2 class="text-xl md:text-2xl font-semibold text-center text-gray-700 mb-8">
-            Yourself an Online Consultation
-        </h2>
-        
-        <form id="bookingForm" class="space-y-6">
-            <!-- Row 1: Name, Phone, Email -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <input 
-                        type="text" 
-                        name="name"
-                        required
-                        class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                        placeholder="Your name"
-                    >
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone number</label>
-                    <input 
-                        type="tel" 
-                        name="phone"
-                        required
-                        class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                        placeholder="Your phone"
-                    >
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input 
-                        type="email" 
-                        name="email"
-                        required
-                        class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                        placeholder="Your email"
-                    >
-                </div>
-            </div>
-            
-            <!-- Row 2: Booking For, Pick a Service -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Booking For</label>
-                    <input 
-                        type="text" 
-                        name="bookingFor"
-                        required
-                        class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                        placeholder="Who is this for?"
-                    >
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Pick a Service</label>
-                    <select 
-                        name="service"
-                        required
-                        class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition appearance-none cursor-pointer"
-                    >
-                        <option value="">Select a service</option>  
-                    </select>
-                </div>
-            </div>
-            <!-- Submit Button -->
-            <button 
-                type="submit"
-                class="w-full bg-teal-800 hover:bg-teal-900 text-white font-semibold py-4 rounded-lg transition duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Your Partner in Mental Wellness
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Offering ongoing support and personalized care to help you
+              maintain a balanced and healthy mental state.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
             >
-                Submit
-            </button>
-        </form>
-        
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Expert Guidance for Better Living -->
+          <div class="card-hover bg-teal-900 fade-in-up delay-600">
+            <div class="img-zoom-container rounded-2xl overflow-hidden mb-4">
+              <img
+                src="https://framerusercontent.com/images/SYZo22oGp76pywpdm0pCN3RtUIM.jpg"
+                alt="Team meeting"
+                class="img-zoom w-full max-h-96 object-cover"
+              />
+            </div>
+            <h2 class="text-white text-3xl font-serif mb-3">
+              Expert Guidance for Better Living
+            </h2>
+            <p class="text-gray-300 mb-4">
+              Providing professional insights and therapeutic techniques to
+              empower you for a happier, more fulfilling life.
+            </p>
+            <a
+              href="#"
+              class="btn-slide text-white inline-flex items-center hover:underline"
+            >
+              Learn More
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="flex items-center justify-center p-4 mt-8" data-aos="fade-up">
+      <div
+        class="w-full max-w-125 bg-linear-to-br bg-[#e2eddf] to-blue-50 rounded-3xl p-8 md:p-12"
+      >
+        <h1
+          class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2"
+        >
+          Submit Your Details to Book
+        </h1>
+        <h2
+          class="text-xl md:text-2xl font-semibold text-center text-gray-700 mb-8"
+        >
+          Yourself an Online Consultation
+        </h2>
+
+        <form id="bookingForm" class="space-y-6">
+          <!-- Row 1: Name, Phone, Email -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Phone number</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                placeholder="Your phone"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                placeholder="Your email"
+              />
+            </div>
+          </div>
+
+          <!-- Row 2: Booking For, Pick a Service -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Booking For</label
+              >
+              <input
+                type="text"
+                name="bookingFor"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                placeholder="Who is this for?"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Pick a Service</label
+              >
+              <select
+                name="service"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition appearance-none cursor-pointer"
+              >
+                <option value="">Select a service</option>
+              </select>
+            </div>
+          </div>
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="w-full bg-teal-800 hover:bg-teal-900 text-white font-semibold py-4 rounded-lg transition duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
 
     <div>
-        <div class="max-w-7xl mx-auto mt-9" data-aos="fade-up">
+      <div class="max-w-7xl mx-auto mt-9" data-aos="fade-up">
         <!-- Section Title -->
         <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-12">
-            What Our Clients Say
+          What Our Clients Say
         </h2>
 
         <!-- Testimonial Card -->
         <div class="flex flex-col md:flex-row gap-6 items-start">
-            <!-- Left Side: Profile -->
-            <div class="flex items-center gap-4">
-                <img 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" 
-                    alt="Emma Johnson" 
-                    class="w-16 h-16 rounded-lg object-cover shrink-0"
-                />
-                <div class="text-left">
-                    <h3 class="text-lg font-semibold text-gray-900">Emma Johnson</h3>
-                    <p class="text-sm text-gray-600">Marketing Manager</p>
-                </div>
+          <!-- Left Side: Profile -->
+          <div class="flex items-center gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
+              alt="Emma Johnson"
+              class="w-16 h-16 rounded-lg object-cover shrink-0"
+            />
+            <div class="text-left">
+              <h3 class="text-lg font-semibold text-gray-900">Emma Johnson</h3>
+              <p class="text-sm text-gray-600">Marketing Manager</p>
             </div>
+          </div>
 
-            <!-- Right Side: Testimonial Text -->
-            <div class="flex-1">
-                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
-                    "Therapy provided me with the tools needed to manage my anxiety. I now feel more in control of my emotions and life. It has truly empowered me to handle challenges with confidence."
-                </p>
-            </div>
+          <!-- Right Side: Testimonial Text -->
+          <div class="flex-1">
+            <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+              "Therapy provided me with the tools needed to manage my anxiety. I
+              now feel more in control of my emotions and life. It has truly
+              empowered me to handle challenges with confidence."
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <div class="bg-linear-to-br from-green-50 to-green-100 p-4 md:p-8 mt-8">
-        <div class="max-w-7xl mx-auto">
+      <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            
-            <!-- Left Side: Image -->
-            <div class="w-full" data-aos="fade-right">
-                <img 
-                    src="https://framerusercontent.com/images/rrVIB0hGhK7FCZYm4dcHcDbtdUk.jpg" 
-                    alt="Two people hugging" 
-                    class="w-full h-auto rounded-3xl object-cover shadow-xl"
-                />
+          <!-- Left Side: Image -->
+          <div class="w-full" data-aos="fade-right">
+            <img
+              src="https://framerusercontent.com/images/rrVIB0hGhK7FCZYm4dcHcDbtdUk.jpg"
+              alt="Two people hugging"
+              class="w-full h-auto rounded-3xl object-cover shadow-xl"
+            />
+          </div>
+
+          <!-- Right Side: FAQ Accordion -->
+          <div class="space-y-4" data-aos="fade-left">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+              <button
+                class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
+                onclick="toggleFAQ(1)"
+              >
+                <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
+                  What is the difference between a psychologist and a
+                  psychiatrist?
+                </h3>
+                <svg
+                  id="icon-1"
+                  class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="content-1"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+              >
+                <div class="px-6 pb-5">
+                  <p class="text-gray-600 leading-relaxed">
+                    Psychologists and psychiatrists both work in the mental
+                    health field, but they differ in their approaches.
+                    Psychologists primarily use talk therapy and counseling to
+                    address emotional and behavioral issues, while psychiatrists
+                    are medical doctors who can prescribe medication in addition
+                    to therapy.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <!-- Right Side: FAQ Accordion -->
-            <div class="space-y-4" data-aos="fade-left">
-                
-                <!-- FAQ Item 1 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                    <button 
-                        class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
-                        onclick="toggleFAQ(1)"
-                    >
-                        <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
-                            What is the difference between a psychologist and a psychiatrist?
-                        </h3>
-                        <svg 
-                            id="icon-1" 
-                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="content-1" class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">
-                                Psychologists and psychiatrists both work in the mental health field, but they differ in their approaches. Psychologists primarily use talk therapy and counseling to address emotional and behavioral issues, while psychiatrists are medical doctors who can prescribe medication in addition to therapy.
-                            </p>
-                        </div>
-                    </div>
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+              <button
+                class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
+                onclick="toggleFAQ(2)"
+              >
+                <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
+                  How do I know if I need therapy?
+                </h3>
+                <svg
+                  id="icon-2"
+                  class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="content-2"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+              >
+                <div class="px-6 pb-5">
+                  <p class="text-gray-600 leading-relaxed">
+                    You might consider therapy if you're experiencing persistent
+                    feelings of distress, anxiety, sadness, or if you're facing
+                    challenges that impact your daily life. It can also be
+                    beneficial for personal growth, self-exploration, and
+                    developing coping strategies for life's stressors.
+                  </p>
                 </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                    <button 
-                        class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
-                        onclick="toggleFAQ(2)"
-                    >
-                        <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
-                            How do I know if I need therapy?
-                        </h3>
-                        <svg 
-                            id="icon-2" 
-                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="content-2" class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">
-                                You might consider therapy if you're experiencing persistent feelings of distress, anxiety, sadness, or if you're facing challenges that impact your daily life. It can also be beneficial for personal growth, self-exploration, and developing coping strategies for life's stressors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                    <button 
-                        class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
-                        onclick="toggleFAQ(3)"
-                    >
-                        <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
-                            What is cognitive-behavioral therapy (CBT), and how does it work?
-                        </h3>
-                        <svg 
-                            id="icon-3" 
-                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="content-3" class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">
-                                CBT is a widely used therapeutic approach that focuses on identifying and changing negative thought patterns and behaviors. It helps individuals develop healthier ways of thinking and coping with challenges. The goal is to improve mental well-being by addressing the connection between thoughts, feelings, and behaviors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                    <button 
-                        class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
-                        onclick="toggleFAQ(4)"
-                    >
-                        <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
-                            How can I manage stress effectively?
-                        </h3>
-                        <svg 
-                            id="icon-4" 
-                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="content-4" class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">
-                                Stress management involves adopting healthy coping strategies. This may include practicing mindfulness, engaging in regular physical activity, maintaining a balanced diet, getting adequate sleep, and seeking support from friends, family, or a mental health professional. Developing effective stress-management techniques can enhance overall well-being.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+              <button
+                class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
+                onclick="toggleFAQ(3)"
+              >
+                <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
+                  What is cognitive-behavioral therapy (CBT), and how does it
+                  work?
+                </h3>
+                <svg
+                  id="icon-3"
+                  class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="content-3"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+              >
+                <div class="px-6 pb-5">
+                  <p class="text-gray-600 leading-relaxed">
+                    CBT is a widely used therapeutic approach that focuses on
+                    identifying and changing negative thought patterns and
+                    behaviors. It helps individuals develop healthier ways of
+                    thinking and coping with challenges. The goal is to improve
+                    mental well-being by addressing the connection between
+                    thoughts, feelings, and behaviors.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+              <button
+                class="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition"
+                onclick="toggleFAQ(4)"
+              >
+                <h3 class="text-lg md:text-xl font-semibold text-gray-800 pr-4">
+                  How can I manage stress effectively?
+                </h3>
+                <svg
+                  id="icon-4"
+                  class="w-6 h-6 text-gray-600 transform transition-transform duration-300 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="content-4"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+              >
+                <div class="px-6 pb-5">
+                  <p class="text-gray-600 leading-relaxed">
+                    Stress management involves adopting healthy coping
+                    strategies. This may include practicing mindfulness,
+                    engaging in regular physical activity, maintaining a
+                    balanced diet, getting adequate sleep, and seeking support
+                    from friends, family, or a mental health professional.
+                    Developing effective stress-management techniques can
+                    enhance overall well-being.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
     <!-- footer -->
-<footer class="bg-[#163c3e] text-white mt-8">
-  <div class="max-w-350 mx-auto px-6">
-    <div class="flex flex-col items-center text-center pt-28"">
-      <h2 class="text-3xl md:text-4xl font-medium">
-        Don't Hesitate, Contact Us
-      </h2>
-      <p class="mt-4 text-sm md:text-base text-gray-200">
-        Your Journey to Emotional Wellness Starts Here
-      </p>
-      <button
-        class="mt-8 bg-white text-[#163c3e] px-6 py-3 rounded-lg
-               hover:bg-[#163c3e] hover:text-white border border-white transition"
-      >
-        Contact Us
-      </button>
-    </div>
+    <footer class="bg-[#163c3e] text-white mt-20">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col items-center text-center pt-28">
+          <h2 class="text-3xl md:text-4xl font-medium">
+            Don't Hesitate, Contact Us
+          </h2>
+          <p class="mt-4 text-sm md:text-base text-gray-200">
+            Your Journey to Emotional Wellness Starts Here
+          </p>
+          <button
+            class="mt-8 bg-white text-[#163c3e] px-6 py-3 rounded-lg hover:bg-[#163c3e] hover:text-white border border-white transition"
+          >
+            Contact Us
+          </button>
+        </div>
 
-   
-    <hr class="my-20 border-[#485367]">
+        <hr class="my-20 border-[#485367]" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="max-w-md text-gray-200">
+              Design amazing digital experiences that <br />
+              create more happy in the world.
+            </p>
 
-      <div>
-        <p class="max-w-md text-gray-200">
-          Design amazing digital experiences that <br />
-          create more happy in the world.
-        </p>
+            <ul class="flex gap-8 mt-10 font-medium text-sm">
+              <li class="hover:underline cursor-pointer">About</li>
+              <li class="hover:underline cursor-pointer">Services</li>
+              <li class="hover:underline cursor-pointer">Pricing</li>
+              <li class="hover:underline cursor-pointer">Sessions</li>
+              <li class="hover:underline cursor-pointer">Appointment</li>
+            </ul>
+          </div>
 
-        <ul class="flex gap-8 mt-10 font-medium text-sm">
-          <li class="hover:underline cursor-pointer">About</li>
-          <li class="hover:underline cursor-pointer">Services</li>
-          <li class="hover:underline cursor-pointer">Pricing</li>
-          <li class="hover:underline cursor-pointer">Sessions</li>
-          <li class="hover:underline cursor-pointer">Appointment</li>
-        </ul>
-      </div>
+          <div>
+            <p class="mb-6 font-medium">@instagram</p>
+            <div class="flex gap-4">
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 16.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 19.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 20.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 21.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 24.png"
+              />
+              <img
+                class="w-14 h-14 rounded-lg object-cover"
+                src="./img/image copy 25.png"
+              />
+            </div>
+          </div>
+        </div>
 
-      <div>
-        <p class="mb-6 font-medium">@instagram</p>
-        <div class="flex gap-4">
-          <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/6tFHzZqxXeQbox9yyoTr9N5gTAY.jpg?scale-down-to=1024" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/oyLQ7HymgJ38ebY97MfU3eUVPs.jpg?scale-down-to=512" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/GCzABV6KlAGO9xFRBD3wf7z48E.jpg?scale-down-to=512" />
-            <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/Sys8bhbuiYbFjxEFZZI06uJTzY.jpg?scale-down-to=512" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/Sys8bhbuiYbFjxEFZZI06uJTzY.jpg?scale-down-to=512" />
-          <img class="w-14 h-14 rounded-lg object-cover" src="https://framerusercontent.com/images/72hXIyswWXvUgKn2vtCqF1Ew3A.jpg?scale-down-to=512" />
+        <hr class="my-16 border-[#485367]" />
+
+        <!-- Bottom Footer -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm pb-8 text-gray-300"
+        >
+          <p>© Psychologist. All Rights Reserved 2024.</p>
+          <p>Designed by fourtwelve.</p>
         </div>
       </div>
-    </div>
-    <hr class="my-16 border-[#485367]">
-
-    <!-- Bottom Footer -->
-    <div class="flex flex-col md:flex-row justify-between items-center text-sm pb-8 text-gray-300">
-      <p>© Psychologist. All Rights Reserved 2024.</p>
-      <p>Designed by fourtwelve.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
     <script src="./service.js"></script>
-</body>
+  </body>
 </html>

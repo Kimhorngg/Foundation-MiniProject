@@ -22,30 +22,67 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
-<header>
-      <nav id="navbar" class="transition-colors duration-300 fixed top-0 left-0 w-full z-50 bg-white">
-        <div class="max-w-[1310px] mx-auto px-4 h-20 flex items-center">
+ <header>
+      <nav
+        id="navbar"
+        class="transition-colors duration-300 fixed top-0 left-0 w-full z-50 bg-white"
+      >
+        <div class="max-w-screen-2xl mx-auto px-4 h-20 flex items-center">
           <div class="flex items-center gap-10">
+            <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-              <img src="./images/image6.jpg" width="45" />
-              <span class="text-xl font-medium text-[#163c3e]">Psychologist</span>
+              <img src="./img/image.png" width="45" />
+              <span class="text-xl font-medium text-[#163c3e]">
+                Psychologist
+              </span>
             </a>
-            <ul class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]">
-              <li><a href="#" class="hover:text-[#5d7676]">Home</a></li>
+            <!-- Desktop Menu -->
+            <ul
+              class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]"
+            >
+              <li><a href="index.html" class="hover:text-[#5d7676]">Home</a></li>
               <li><a href="#" class="hover:text-[#5d7676]">About Us</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Services</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Sessions</a></li>
+              <li><a href="service.html" class="hover:text-[#5d7676]">Services</a></li>
+              <li><a href="Sessions.html" class="hover:text-[#5d7676]">Sessions</a></li>
             </ul>
           </div>
           <div class="ml-auto hidden lg:flex items-center gap-6 text-[#163c3e]">
-            <span class="flex items-center gap-2"><i class="fa-solid fa-phone-flip"></i> (704) 555-0127</span>
-            <button class="border border-[#163c3e] px-5 py-2 rounded-lg hover:bg-[#163c3e] hover:text-white transition">Contact Us</button>
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
+            </span>
+            <button
+              class="border-[#163c3e] px-5 py-2 rounded-lg hover:bg-[#163c3e] hover:text-white transition"
+            >
+              Contact Us
+            </button>
           </div>
-          <button id="menu-btn" class="ml-auto lg:hidden text-2xl text-[#163c3e]">☰</button>
+          <!-- mobile btn -->
+          <button
+            id="menu-btn"
+            class="ml-auto lg:hidden text-2xl text-[#163c3e]"
+          >
+            ☰
+          </button>
+        </div>
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-6">
+          <ul class="flex flex-col gap-4 text-lg text-[#163c3e]">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Sessions</a></li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
+            </li>
+            <li>
+              <button class="w-[150px] border border-[#163c3e] py-2 rounded-lg">
+                Contact Us
+              </button>
+            </li>
+          </ul>
         </div>
       </nav>
-</header>
+    </header>
 
 <main>
     <section class="relative h-[400px] w-full flex items-center">
@@ -91,7 +128,8 @@
           </div>
         </div>
         
-        <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
+        <a href="./CoupleCounseling.html">
+          <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
              data-aos="fade-up" data-aos-delay="200">
           <div class="flex items-center gap-8 md:w-2/5">
             <img src="./images/image2.png" width="45"/>
@@ -101,8 +139,11 @@
             <p class="text-[#1a3c3b]/80 text-lg leading-relaxed transition-colors duration-300 group-hover:text-black/90">Couple counseling provides a safe and confidential space where partners can openly express their thoughts.</p>
           </div>
         </div>
+        </a>
+        
 
-        <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
+        <a  href="./datingandrelation.html">
+          <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
              data-aos="fade-up" data-aos-delay="300">
           <div class="flex items-center gap-8 md:w-2/5">
             <img src="./images/image3.png" width="45"/>
@@ -112,8 +153,11 @@
             <p class="text-[#1a3c3b]/80 text-lg leading-relaxed transition-colors duration-300 group-hover:text-black/90">It involves active listening, expressing thoughts and feelings openly, and navigating challenges.</p>
           </div>
         </div>
+        </a>
+        
 
-        <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
+        <a href="couple_therapy.html">
+          <div class="group relative bg-[#eef3ed] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-1 border-b-4 border-transparent hover:border-[#2a5c5a]" 
              data-aos="fade-up" data-aos-delay="400">
           <div class="flex items-center gap-8 md:w-2/5">
             <img src="./images/head.png" width="45"/>
@@ -123,6 +167,8 @@
             <p class="text-[#1a3c3b]/80 text-lg leading-relaxed transition-colors duration-300 group-hover:text-black/90">This involves exploring each partner's perspective, understanding communication patterns.</p>
           </div>
         </div>
+        </a>
+        
 
       </div>
     </section>

@@ -67,7 +67,7 @@
           <div class="flex items-center gap-10">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-              <img src="./img/logo.png" width="45" />
+              <img src="./img/image.png" width="45" />
               <span class="text-xl font-medium text-[#163c3e]">
                 Psychologist
               </span>
@@ -76,10 +76,10 @@
             <ul
               class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]"
             >
-              <li><a href="#" class="hover:text-[#5d7676]">Home</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">About Us</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Services</a></li>
-              <li><a href="#" class="hover:text-[#5d7676]">Sessions</a></li>
+              <li><a href="index.html" class="hover:text-[#5d7676]">Home</a></li>
+              <li><a href="./src/AboutUs.html" class="hover:text-[#5d7676]">About Us</a></li>
+              <li><a href="service.html" class="hover:text-[#5d7676]">Services</a></li>
+              <li><a href="Sessions.html" class="hover:text-[#5d7676]">Sessions</a></li>
             </ul>
           </div>
           <div class="ml-auto hidden lg:flex items-center gap-6 text-[#163c3e]">
@@ -103,10 +103,10 @@
         <!-- mobile menu -->
         <div id="mobile-menu" class="hidden lg:hidden px-6 pb-6">
           <ul class="flex flex-col gap-4 text-lg text-[#163c3e]">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Sessions</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./src/AboutUs.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="Sessions.html">Sessions</a></li>
             <li class="flex items-center gap-2">
               <i class="fa-solid fa-phone-flip"></i> (704) 555-0127
             </li>
@@ -311,12 +311,14 @@
               Stay informed about the latest research in psychology.
             </p>
           </div>
-
-          <button
+          <a href="./Sessions.html">
+            <button
             class="bg-[#163C3E] text-white px-6 py-2 rounded-lg hover:bg-white hover:text-[#163C3E] hover:border hover:border-[#163C3E] transition"
           >
             View All Sessions
           </button>
+          </a>
+          
         </div>
       </section>
       <!-- Recent Sessions -->
@@ -327,7 +329,7 @@
           data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="200"
-          href=""
+          href="./CoupleCounseling.html"
         >
           <div
             class="w-full max-w-5xl bg-[#E2EDDF] p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col lg:flex-row gap-6 lg:gap-10 justify-between items-start hover:bg-white hover:border-b hover:border-[#163C3E] transition"
@@ -358,7 +360,7 @@
           data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="200"
-          href=""
+          href="./datingandrelation.html"
         >
           <div
             class="w-full max-w-5xl bg-[#E2EDDF] p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col lg:flex-row gap-6 lg:gap-10 justify-between items-start hover:bg-white hover:border-b hover:border-[#163C3E] transition"
@@ -383,15 +385,10 @@
         </a>
       </section>
     </main>
-    <!-- footer -->
+   
 
-    <footer
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="300"
-      data-aos-offset="200"
-      class="bg-[#163c3e] text-white mt-10"
-    >
+     <!-- footer -->
+    <footer class="bg-[#163c3e] text-white mt-20">
       <div class="max-w-[1400px] mx-auto px-6">
         <div class="flex flex-col items-center text-center pt-28">
           <h2 class="text-3xl md:text-4xl font-medium">
@@ -425,33 +422,14 @@
             </ul>
           </div>
 
-          <div>
-            <p class="mb-6 font-medium">@instagram</p>
+          <div class="md:ml-auto md:text-right">
+            <p class="mb-6 font-medium">Supported by</p>
             <div class="flex gap-4">
               <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/img1.png"
+               class="w-24 h-24 rounded-lg object-contain"
+  src="./img/New Logo iSTAD-12.png"
               />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/img2.avif"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/img3.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/img4.avif"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/img5.avif"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image 6.avif"
-              />
+            
             </div>
           </div>
         </div>
@@ -467,6 +445,22 @@
         </div>
       </div>
     </footer>
+
+      <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const nav = document.getElementById("navbar");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+
+        if (window.innerWidth < 1024) {
+          nav.classList.toggle("bg-[#e1ecde]");
+
+          nav.classList.toggle("bg-white");
+        }
+      });
+    </script>
     <script src="js/script.js"></script>
     <!-- Aos   -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

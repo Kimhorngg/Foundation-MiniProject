@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -15,6 +16,24 @@
       referrerpolicy="no-referrer"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     />
+
+    <!-- Primary SEO -->
+    <title>
+      Professional Psychological Services | Therapy & Mental Wellness
+    </title>
+
+    <meta
+      name="description"
+      content="Explore professional psychological services including individual therapy, child counseling, mental wellness support, and expert guidance for a healthier, balanced life."
+    />
+
+    <meta
+      name="keywords"
+      content="psychologist, therapy services, mental health, individual therapy, child therapy, counseling, online consultation, mental wellness, CBT, stress management"
+    />
+
+    <meta name="author" content="Psychologist Clinic" />
+    <meta name="robots" content="index, follow" />
 
     <style>
       h1 {
@@ -27,7 +46,7 @@
       @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(40px);
         }
         to {
           opacity: 1;
@@ -36,44 +55,51 @@
       }
 
       .fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
+        animation: fadeInUp 1.4s ease-out forwards;
       }
 
       /* Stagger delays */
       .delay-100 {
-        animation-delay: 0.1s;
-        opacity: 0;
-      }
-      .delay-200 {
         animation-delay: 0.2s;
         opacity: 0;
       }
-      .delay-300 {
-        animation-delay: 0.3s;
-        opacity: 0;
-      }
-      .delay-400 {
+
+      .delay-200 {
         animation-delay: 0.4s;
         opacity: 0;
       }
-      .delay-500 {
-        animation-delay: 0.5s;
+
+      .delay-300 {
+        animation-delay: 0.6s;
         opacity: 0;
       }
+
+      .delay-400 {
+        animation-delay: 0.8s;
+        opacity: 0;
+      }
+
+      .delay-500 {
+        animation-delay: 1s;
+        opacity: 0;
+      }
+
       .delay-600 {
-        animation-delay: 0.6s;
+        animation-delay: 1.2s;
         opacity: 0;
       }
 
       /* Card Hover Effect */
       .card-hover {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+          transform 0.6s ease,
+          box-shadow 0.6s ease;
         cursor: pointer;
       }
 
       .card-hover:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
       }
 
       /* Image Zoom on Hover */
@@ -83,7 +109,7 @@
       }
 
       .img-zoom {
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.8s ease;
       }
 
       .img-zoom-container:hover .img-zoom {
@@ -117,123 +143,120 @@
         height: 300px;
       }
 
-.btn-slide:hover {
-    transform: translateX(5px);
-}
-       
-        
-        
-        /* Mobile phones (up to 640px) */
-        @media (max-width: 640px) {
-            .toggle-btn {
-                padding: 0.625rem;
-            }
-            .toggle-btn svg {
-                width: 1.25rem;
-                height: 1.25rem;
-            }
-            .header-text.main-title {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            .header-text.section-title {
-                font-size: 1.5rem;
-                line-height: 2rem;
-            }
-            .subtext {
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-            }
-            .service-box {
-                padding: 1.5rem;
-                border-radius: 1.5rem;
-            }
-            .service-item {
-                font-size: 0.875rem;
-                padding: 0.5rem 0;
-            }
-            .services-row {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-        
-        /* Tablets (641px to 1024px) */
-        @media (min-width: 641px) and (max-width: 1024px) {
-            .toggle-btn {
-                padding: 0.75rem;
-            }
-            .toggle-btn svg {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            .header-text.main-title {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-            .header-text.section-title {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            .subtext {
-                font-size: 0.875rem;
-                line-height: 1.5rem;
-            }
-            .service-box {
-                padding: 2rem;
-                border-radius: 2rem;
-            }
-            .service-item {
-                font-size: 0.9375rem;
-            }
-            .services-row {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-        }
-        
-        /* Desktop (1025px and above) */
-        @media (min-width: 1025px) {
-            .toggle-btn {
-                padding: 0.75rem;
-            }
-            .toggle-btn svg {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            .header-text.main-title {
-                font-size: 3rem;
-                line-height: 1;
-            }
-            .header-text.section-title {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-            .subtext {
-                font-size: 1rem;
-                line-height: 1.5rem;
-            }
-            .service-box {
-                padding: 3rem;
-                border-radius: 1.5rem;
-            }
-            .service-item {
-                font-size: 1rem;
-            }
-            .services-row {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 2rem;
-            }
-            .header-section {
-                flex-direction: row;
-            }
-        }
-    </style>
-</head>
-<body class="light-mode transition-colors duration-300  ">
+      .btn-slide:hover {
+        transform: translateX(5px);
+      }
 
+      /* Mobile phones (up to 640px) */
+      @media (max-width: 640px) {
+        .toggle-btn {
+          padding: 0.625rem;
+        }
+        .toggle-btn svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+        .header-text.main-title {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+        .header-text.section-title {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        .subtext {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+        .service-box {
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+        }
+        .service-item {
+          font-size: 0.875rem;
+          padding: 0.5rem 0;
+        }
+        .services-row {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      /* Tablets (641px to 1024px) */
+      @media (min-width: 641px) and (max-width: 1024px) {
+        .toggle-btn {
+          padding: 0.75rem;
+        }
+        .toggle-btn svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .header-text.main-title {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+        .header-text.section-title {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+        .subtext {
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+        }
+        .service-box {
+          padding: 2rem;
+          border-radius: 2rem;
+        }
+        .service-item {
+          font-size: 0.9375rem;
+        }
+        .services-row {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+
+      /* Desktop (1025px and above) */
+      @media (min-width: 1025px) {
+        .toggle-btn {
+          padding: 0.75rem;
+        }
+        .toggle-btn svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .header-text.main-title {
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .header-text.section-title {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+        .subtext {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        .service-box {
+          padding: 3rem;
+          border-radius: 1.5rem;
+        }
+        .service-item {
+          font-size: 1rem;
+        }
+        .services-row {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+        .header-section {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body class="light-mode transition-colors duration-300 mt-10">
     <header>
       <nav
         id="navbar"
@@ -252,10 +275,22 @@
             <ul
               class="hidden lg:flex items-center gap-8 text-lg text-[#163c3e]"
             >
-              <li><a href="index.html" class="hover:text-[#5d7676]">Home</a></li>
-              <li><a href="./src/AboutUs.html" class="hover:text-[#5d7676]">About Us</a></li>
-              <li><a href="service.html" class="hover:text-[#5d7676]">Services</a></li>
-              <li><a href="Sessions.html" class="hover:text-[#5d7676]">Sessions</a></li>
+              <li>
+                <a href="index.html" class="hover:text-[#5d7676]">Home</a>
+              </li>
+              <li>
+                <a href="./src/AboutUs.html" class="hover:text-[#5d7676]"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="service.html" class="hover:text-[#5d7676]">Services</a>
+              </li>
+              <li>
+                <a href="Sessions.html" class="hover:text-[#5d7676]"
+                  >Sessions</a
+                >
+              </li>
             </ul>
           </div>
           <div class="ml-auto hidden lg:flex items-center gap-6 text-[#163c3e]">
@@ -296,14 +331,12 @@
       </nav>
     </header>
     <div data-aos="fade-up">
-      <div class="w-full px-0 ">
+      <div class="w-full px-0">
         <!-- Header Section -->
         <div
           class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-end border-b border-gray-200"
         >
-          <h1 class="text-6xl font-serif text-[#1a3a3a] leading-tight">
-            Our Services
-          </h1>
+          <h1 class="text-6xl text-[#1a3a3a] leading-tight">Our Services</h1>
 
           <p class="max-w-md text-gray-600 text-lg mb-2 md:text-right">
             Exploring various psychological concepts, theories, and research
@@ -311,15 +344,24 @@
           </p>
         </div>
         <!-- What We Do Section -->
-        <div class="service-box transition-colors duration-900 bg-[#e2eddf]">
-          <h2 class="header-text section-title font-semibold text-center mb-8 text-[#1a3a3a]">
+        <div
+          class="service-box transition-colors duration-1100 bg-[#e2eddf]"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-easing="ease-out-cubic"
+        >
+          <h2
+            class="header-text section-title font-semibold text-center mb-8 text-[#1a3a3a]"
+          >
             What We Do
           </h2>
 
           <!-- Services Grid -->
           <div style="display: flex; flex-direction: column; gap: 1.5rem">
             <!-- First Row -->
-            <div class="services-row flex items-center justify-center text-[#515b51]">
+            <div
+              class="services-row flex items-center justify-center text-[#515b51]"
+            >
               <div class="service-item text-center sm:text-left">
                 • Mindfulness in Daily Living
               </div>
@@ -335,7 +377,9 @@
             </div>
 
             <!-- Second Row -->
-            <div class="services-row flex items-center justify-center text-[#515b51]">
+            <div
+              class="services-row flex items-center justify-center text-[#515b51]"
+            >
               <div class="service-item text-center sm:text-left">
                 • Relationship Dynamics
               </div>
@@ -586,17 +630,17 @@
       </div>
     </div>
 
-    <div class="flex items-center justify-center p-4 mt-8" data-aos="fade-up">
+    <div class="flex justify-center items-center px-4 mt-20" data-aos="fade-up">
       <div
-        class="w-full max-w-125 bg-linear-to-br bg-[#e2eddf] to-blue-50 rounded-3xl p-8 md:p-12"
+        class="w-full max-w-md md:max-w-4xl lg:max-w-7xl mx-auto bg-linear-to-br bg-[#e2eddf] to-blue-50 rounded-3xl p-6 md:p-8 lg:p-10"
       >
         <h1
-          class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2"
+          class="text-2xl md:text-3xl font-semibold text-center text-[#163f40] mb-2"
         >
           Submit Your Details to Book
         </h1>
         <h2
-          class="text-xl md:text-2xl font-semibold text-center text-gray-700 mb-8"
+          class="text-xl md:text-2xl font-semibold text-center text-[#163f40] mb-8"
         >
           Yourself an Online Consultation
         </h2>
@@ -684,7 +728,11 @@
     </div>
 
     <div>
-      <div class="max-w-7xl mx-auto mt-9" data-aos="fade-up">
+      <div
+        class="max-w-7xl mx-auto mt-20"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <!-- Section Title -->
         <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-12">
           What Our Clients Say
@@ -707,7 +755,7 @@
 
           <!-- Right Side: Testimonial Text -->
           <div class="flex-1">
-            <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
               "Therapy provided me with the tools needed to manage my anxiety. I
               now feel more in control of my emotions and life. It has truly
               empowered me to handle challenges with confidence."
@@ -717,11 +765,17 @@
       </div>
     </div>
 
-    <div class="bg-linear-to-br from-green-50 to-green-100 p-4 md:p-8 mt-8">
+    <div class="bg-linear-to-br from-green-50 to-green-100 p-4 md:p-8 mt-20">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <!-- Left Side: Image -->
-          <div class="w-full" data-aos="fade-right">
+          <div
+            class="w-full"
+            class="w-full"
+            data-aos="fade-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-cubic"
+          >
             <img
               src="https://framerusercontent.com/images/rrVIB0hGhK7FCZYm4dcHcDbtdUk.jpg"
               alt="Two people hugging"
@@ -730,7 +784,7 @@
           </div>
 
           <!-- Right Side: FAQ Accordion -->
-          <div class="space-y-4" data-aos="fade-left">
+          <div class="space-y-4" data-aos="fade-left" data-aos-duration="900">
             <!-- FAQ Item 1 -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
               <button
@@ -901,6 +955,7 @@
       </div>
     </div>
     <!-- footer -->
+    <!-- footer -->
     <footer class="bg-[#163c3e] text-white mt-20">
       <div class="max-w-[1400px] mx-auto px-6">
         <div class="flex flex-col items-center text-center pt-28">
@@ -935,32 +990,12 @@
             </ul>
           </div>
 
-          <div>
-            <p class="mb-6 font-medium">@instagram</p>
+          <div class="md:ml-auto md:text-right">
+            <p class="mb-6 font-medium">Supported by</p>
             <div class="flex gap-4">
               <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 16.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 19.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 20.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 21.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 24.png"
-              />
-              <img
-                class="w-14 h-14 rounded-lg object-cover"
-                src="./img/image copy 25.png"
+                class="w-24 h-24 rounded-lg object-contain"
+                src="./img/New Logo iSTAD-12.png"
               />
             </div>
           </div>
